@@ -29,6 +29,7 @@ namespace Seiro.Interp {
 
 		void Awake() {
 			var manager = IntrpManager.instance;
+
 			_if1 = manager.Attach(new IntrpFloat(-5f, 5f, IntrpType.Liner, OnIF1Update));
 			_if2 = manager.Attach(new IntrpFloat(-5f, 5f, IntrpType.EaseIn, OnIF2Update));
 			_if3 = manager.Attach(new IntrpFloat(-5f, 5f, IntrpType.EaseOut, OnIF3Update));
@@ -40,6 +41,7 @@ namespace Seiro.Interp {
 			_ia4 = manager.Attach(new IntrpAngle(135f, -45f, IntrpType.EaseInOut, OnIA4Update));
 
 			_rgba = manager.Attach(new IntrpRGBA(fromColor, toColor, IntrpType.EaseInOut, OnRGBAUpdate));
+
 		}
 
 		void UpdatePosition(Transform t, float value) {

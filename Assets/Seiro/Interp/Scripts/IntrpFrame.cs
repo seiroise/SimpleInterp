@@ -28,7 +28,7 @@ namespace Seiro.Interp {
 			this.onFinish = onFinish;
 		}
 
-		bool IInterpolatable.Update(float dt) {
+		public bool Update(float dt) {
 			if (_isInterpolated) {
 				_elapsed += dt;
 				if (_elapsed >= _delay) {
@@ -52,17 +52,13 @@ namespace Seiro.Interp {
 			return _isInterpolated;
 		}
 
-		bool IInterpolatable.IsNeededUpdate() {
+		public bool IsNeededUpdate() {
 			return _isInterpolated;
 		}
 
-		void IInterpolatable.Interpolate() {
+		public void Interpolate() {
 			_elapsed = 0f;
 			_isInterpolated = true;
-		}
-
-		public void Interpolate() {
-			((IInterpolatable)this).Interpolate();
 		}
 
 		protected abstract void UpdateProc();

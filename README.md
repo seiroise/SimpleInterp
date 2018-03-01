@@ -1,4 +1,4 @@
-[](https://github.com/seiroise/SimpleInterp/blob/media/media/intrp.gif)
+![](https://github.com/seiroise/SimpleInterp/blob/media/media/intrp.gif)
 
 ## 内容
 - 簡単に補間を行える！
